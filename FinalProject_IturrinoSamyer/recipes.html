@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes - Food's Biggest Critic</title>
+</head>
+<body>
+    <header>
+        <h1>Recipes</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="travel-guides.html">Travel Guides</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="tabs">
+            <button class="tab-button" onclick="openTab(event, 'FallRecipes')">Fall Recipes</button>
+            <button class="tab-button" onclick="openTab(event, 'Desserts')">Desserts</button>
+        </section>
+
+        <section id="FallRecipes" class="tab-content" style="display: none;">
+            <h2>Fall Recipes</h2>
+            <table style="width:50%; border-collapse: collapse; margin: auto;">
+                <thead>
+                    <tr>
+                        <th style="border: 1px solid black; padding: 8px;">Recipe</th>
+                        <th style="border: 1px solid black; padding: 8px;">Description</th>
+                        <th style="border: 1px solid black; padding: 8px;">Rating</th>
+                        <th style="border: 1px solid black; padding: 8px;">Link</th>
+                    </tr>
+                </thead>
+<tbody>
+    <tr>
+        <td style="border: 1px solid black; padding: 8px;">Pumpkin Soup</td>
+        <td style="border: 1px solid black; padding: 8px;">A warm, hearty fall favorite.</td>
+        <td style="border: 1px solid black; padding: 8px;">4.8/5</td>
+        <td style="border: 1px solid black; padding: 8px;"><a href="https://cookieandkate.com/creamy-vegan-pumpkin-soup/" target="_blank">View Recipe</a></td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid black; padding: 8px;">Butternut Squash Risotto</td>
+        <td style="border: 1px solid black; padding: 8px;">Creamy and flavorful with a hint of sage.</td>
+        <td style="border: 1px solid black; padding: 8px;">4.7/5</td>
+        <td style="border: 1px solid black; padding: 8px;"><a href="https://www.loveandlemons.com/butternut-squash-risotto/" target="_blank">View Recipe</a></td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid black; padding: 8px;">Maple-Glazed Carrots</td>
+        <td style="border: 1px solid black; padding: 8px;">Sweet and savory side dish for autumn.</td>
+        <td style="border: 1px solid black; padding: 8px;">4.6/5</td>
+        <td style="border: 1px solid black; padding: 8px;"><a href="https://www.allrecipes.com/recipe/235735/maple-glazed-carrots/" target="_blank">View Recipe</a></td>
+    </tr>
+</tbody>
+
+            </table>
+        </section>
+
+        <section id="Desserts" class="tab-content" style="display: none;">
+            <h2>Desserts</h2>
+            <table style="width:50%; border-collapse: collapse; margin: auto;">
+                <thead>
+                    <tr>
+                        <th style="border: 1px solid black; padding: 8px;">Recipe</th>
+                        <th style="border: 1px solid black; padding: 8px;">Description</th>
+                        <th style="border: 1px solid black; padding: 8px;">Rating</th>
+                        <th style="border: 1px solid black; padding: 8px;">Link</th>
+                    </tr>
+                </thead>
+              <tbody>
+    <tr>
+        <td style="border: 1px solid black; padding: 8px;">Chocolate Cake</td>
+        <td style="border: 1px solid black; padding: 8px;">Rich, moist, and indulgent.</td>
+        <td style="border: 1px solid black; padding: 8px;">5/5</td>
+        <td style="border: 1px solid black; padding: 8px;"><a href="https://addapinch.com/the-best-chocolate-cake-recipe-ever/" target="_blank">View Recipe</a></td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid black; padding: 8px;">Apple Pie</td>
+        <td style="border: 1px solid black; padding: 8px;">A classic dessert with a flaky crust.</td>
+        <td style="border: 1px solid black; padding: 8px;">4.9/5</td>
+        <td style="border: 1px solid black; padding: 8px;"><a href="https://littlespoonfarm.com/apple-pie-recipe/" target="_blank">View Recipe</a></td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid black; padding: 8px;">Pecan Tart</td>
+        <td style="border: 1px solid black; padding: 8px;">Perfectly sweet and nutty with a buttery crust.</td>
+        <td style="border: 1px solid black; padding: 8px;">4.8/5</td>
+        <td style="border: 1px solid black; padding: 8px;"><a href="https://www.allrecipes.com/recipe/10348/tiny-pecan-tarts/" target="_blank">View Recipe</a></td>
+    </tr>
+</tbody>
+
+            </table>
+        </section>
+
+        <section class="submit-recipe">
+            <h2>Share Your Recipe</h2>
+            <form action="submit-recipe.html" method="post">
+                <label for="recipe-name">Recipe Name:</label>
+                <input type="text" id="recipe-name" name="recipe-name" required>
+                <label for="ingredients">Ingredients:</label>
+                <textarea id="ingredients" name="ingredients" required></textarea>
+                <label for="instructions">Instructions:</label>
+                <textarea id="instructions" name="instructions" required></textarea>
+                <button type="submit">Submit Recipe</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Food's Biggest Critic</p>
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            let i, tabcontent, tabbuttons;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].className = tabbuttons[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        // Open the first tab by default
+        document.querySelector('.tab-button').click();
+    </script>
+</body>
+</html>

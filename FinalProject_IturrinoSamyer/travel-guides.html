@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Guides - Food's Biggest Critic</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Travel Guides</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="travel-guides.html">Travel Guides</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="guides">
+            <h2>Explore the World</h2>
+            <article>
+                <h3>Paris</h3>
+                <p>Top attractions, local cuisine, and travel tips.</p>
+			<img src = "paris.jpg" alt="paris">
+
+            </article>
+            <article>
+                <h3>Tokyo</h3>
+                <p>From sushi to shrines, experience the best of Tokyo.</p>
+			<img src = "tokyo.jpg" alt="tokyo">
+
+
+            </article>
+        </section>
+        <section class="comments">
+            <h2>Share Your Travel Tips</h2>
+            <form action="submit-comment.html" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Food's Biggest Critic</p>
+    </footer>
+</body>
+</html>
